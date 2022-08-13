@@ -1,0 +1,8 @@
+---
+
+- name: install nscd package to cache dns requests on debian systems
+  ansible.builtin.package:
+    name: nscd
+    state: present
+  when: ansible_distribution|lower == "debian" or
+        ansible_distribution|lower == "ubuntu"
