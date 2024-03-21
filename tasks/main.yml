@@ -3,4 +3,4 @@
   ansible.builtin.package:
     name: nscd
     state: present
-  when: ansible_distribution|lower == "debian" or ansible_distribution|lower == "ubuntu"
+  when: ansible_os_family == "Debian"
