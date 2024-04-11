@@ -4,3 +4,5 @@
     name: nscd
     state: present
   when: ansible_os_family == "Debian"
+  become: true
+  become_user: root
